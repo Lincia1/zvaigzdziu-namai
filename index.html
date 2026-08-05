@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="lt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Lengvas kasdienis įkvėpimas: horoskopai, sapnų reikšmės, vardai ir testai." />
+    <title>Žvaigždžių namai – horoskopai, sapnai ir testai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="membership.css" />
+    <link rel="stylesheet" href="preferences.css" />
+    <link rel="stylesheet" href="horoscope.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#pradzia" aria-label="Žvaigždžių namai – pradžia"><span class="brand-mark">✦</span> Žvaigždžių namai</a>
+      <button class="menu-button" aria-expanded="false" aria-controls="nav">Meniu</button>
+      <nav id="nav" aria-label="Pagrindinė navigacija">
+        <a href="#horoskopai">Horoskopai</a>
+        <a href="#sapnininkas">Sapnininkas</a>
+        <a href="#vardai">Vardai</a>
+        <a href="#testai">Testai</a>
+      </nav>
+      <div class="preferences"><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Įjungti tamsų foną">☾</button><select id="language-select" class="language-select" aria-label="Pasirinkti kalbą"><option value="lt">LT</option><option value="en">EN</option><option value="ru">RU</option></select></div>
+    </header>
+
+    <main id="pradzia">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Tavo mažas kasdienis ritualas</p>
+          <h1>Įkvėpimas, kuris prasideda nuo smalsumo.</h1>
+          <p class="lead">Atrask dienos horoskopą, sapnų simbolius, vardų istorijas ir lengvus testus vienoje jaukioje vietoje.</p>
+          <a class="button" href="#horoskopai">Rasti savo ženklą <span>→</span></a>
+        </div>
+        <div class="hero-orbit" aria-hidden="true">
+          <span class="moon">☾</span><span class="star one">✦</span><span class="star two">✧</span><span class="orbit-label">Šiandien<br><strong>Rugpjūčio 5</strong></span>
+        </div>
+      </section>
+
+      <section class="today" aria-labelledby="today-title">
+        <div>
+          <p class="eyebrow">Šiandien tau</p>
+          <h2 id="today-title">Maži atradimai kiekvienai nuotaikai</h2>
+        </div>
+        <div class="feature-grid">
+          <a class="feature-card lavender" href="#horoskopai"><span class="card-icon">♈</span><h3>Dienos horoskopas</h3><p>Pažiūrėk, ką žvaigždės siūlo tavo ženklui.</p><span class="card-link">Skaityti →</span></a>
+          <a class="feature-card peach" href="#sapnininkas"><span class="card-icon">☁</span><h3>Ką reiškė sapnas?</h3><p>Surask sapne pasirodžiusį simbolį.</p><span class="card-link">Ieškoti →</span></a>
+          <a class="feature-card mint" href="#testai"><span class="card-icon">✺</span><h3>Greitas testas</h3><p>Koks tavo poilsio stilius?</p><span class="card-link">Pradėti →</span></a>
+        </div>
+      </section>
+
+      <section class="content-section horoscope-section" id="horoskopai" aria-labelledby="horoscope-title">
+        <div class="section-heading"><div><p class="eyebrow">Horoskopai</p><h2 id="horoscope-title">Rask savo žvaigždžių ženklą</h2><p>Lengvas dienos įkvėpimas – tik pramogai ir gerai nuotaikai.</p></div><button class="text-button" id="show-all-signs">Visi ženklai</button></div>
+        <div class="horoscope-tabs" role="tablist" aria-label="Horoskopo laikotarpis"><button class="active" type="button" data-period="daily">Dienos</button><button type="button" data-period="monthly">Mėnesio</button></div>
+        <div class="zodiac-grid" id="zodiac-grid"></div>
+        <article class="daily-reading" id="daily-reading" aria-live="polite"><p class="reading-label">Pasirink ženklą</p><h3>Tavo dienos žinutė laukia čia</h3><p>Spustelėk savo Zodiako ženklą ir perskaityk trumpą įkvėpimą.</p></article>
+      </section>
+
+      <section class="content-section split-section" id="sapnininkas" aria-labelledby="dream-title">
+        <div class="section-copy"><p class="eyebrow">Sapnininkas</p><h2 id="dream-title">Sapnai kalba simboliais</h2><p>Įvesk žodį, kurį prisimeni iš sapno. Čia rasi trumpas, smalsumą žadinančias interpretacijas.</p><div class="search-box"><label class="sr-only" for="dream-search">Ieškoti sapno simbolio</label><input id="dream-search" type="search" placeholder="Pvz., vanduo, šuo, dantys" /><button id="dream-button">Ieškoti</button></div><div id="dream-result" class="search-result" aria-live="polite">Populiarūs: <button data-dream="vanduo">vanduo</button>, <button data-dream="šuo">šuo</button>, <button data-dream="dantys">dantys</button></div></div>
+        <div class="illustration dream-illustration" aria-hidden="true"><span>☾</span><i class="cloud c1"></i><i class="cloud c2"></i><b>✦</b></div>
+      </section>
+
+      <section class="content-section names-section" id="vardai" aria-labelledby="name-title">
+        <div class="section-heading"><div><p class="eyebrow">Vardų reikšmės</p><h2 id="name-title">Kiekvienas vardas turi savo istoriją</h2></div></div>
+        <div class="names-layout"><div class="name-search"><label for="name-search">Sužinok vardo reikšmę</label><div class="search-box"><input id="name-search" type="search" placeholder="Įvesk vardą" /><button id="name-button">Rasti</button></div><div id="name-result" class="search-result" aria-live="polite">Išbandyk: <button data-name="Austėja">Austėja</button>, <button data-name="Lukas">Lukas</button>, <button data-name="Emilija">Emilija</button></div></div><div class="popular-names"><h3>Populiarūs vardai</h3><div class="name-pills"><button data-name="Austėja">Austėja</button><button data-name="Lukas">Lukas</button><button data-name="Emilija">Emilija</button><button data-name="Matas">Matas</button><button data-name="Gabija">Gabija</button><button data-name="Nojus">Nojus</button></div></div></div>
+      </section>
+
+      <section class="content-section quiz-section" id="testai" aria-labelledby="quiz-title">
+        <div class="quiz-intro"><p class="eyebrow">Testai</p><h2 id="quiz-title">Kelios minutės sau</h2><p>Trumpi, žaismingi testai, kurie padeda pažvelgti į save kitu kampu.</p></div>
+        <div class="quiz-card" id="quiz-card"><span class="quiz-number">01</span><h3>Koks tavo poilsio stilius?</h3><p id="quiz-question">Pasirink, kaip atrodo tavo tobula laisva popietė.</p><div class="quiz-options" id="quiz-options"><button data-result="Ramybės kūrėjas">Knyga ir jaukus kampelis</button><button data-result="Nuotykių ieškotojas">Nauja vieta mieste</button><button data-result="Ryšių puoselėtojas">Laikas su artimaisiais</button></div><p class="quiz-result" id="quiz-result" aria-live="polite"></p></div>
+      </section>
+
+      <section class="membership" id="naryste" aria-labelledby="membership-title">
+        <div><p class="eyebrow">Žvaigždžių klubas</p><h2 id="membership-title">Daugiau erdvės tavo smalsumui</h2><p>Nemokamai gali skaityti trumpas įžvalgas. Klubo nariai mato pilnas interpretacijas, išsamius horoskopus ir specialius testus.</p></div>
+        <div class="price-card"><p class="plan-name">Klubo narystė</p><p class="price">2,99 € <small>/ mėn.</small></p><ul><li>Pilni dienos horoskopai</li><li>Išplėstinės sapnų ir vardų reikšmės</li><li>Nauji testai anksčiau už kitus</li></ul><button class="button open-paywall">Sužinoti daugiau</button></div>
+      </section>
+      <section class="newsletter"><div><p class="eyebrow">Naujienlaiškis</p><h2>Savaitės įkvėpimas tavo pašte</h2><p>Vienas šiltas laiškas per savaitę. Be triukšmo.</p></div><form id="newsletter-form"><label class="sr-only" for="email">El. pašto adresas</label><input id="email" type="email" placeholder="tavo@elpastas.lt" required /><button class="button" type="submit">Prenumeruoti</button><p id="form-message" aria-live="polite"></p></form></section>
+    </main>
+    <footer><a class="brand" href="#pradzia"><span class="brand-mark">✦</span> Žvaigždžių namai</a><p>Turinys skirtas pramogai ir bendram įkvėpimui.</p><p>© <span id="year"></span> Žvaigždžių namai</p></footer>
+    <dialog class="paywall" id="paywall"><button class="close-modal" aria-label="Uždaryti">×</button><p class="eyebrow">Pilna įžvalga</p><h2>Atrakink daugiau „Žvaigždžių namų“</h2><p>Šis demonstracinis langas rodo, kaip veiks mokamas turinys. Prijungus mokėjimų sistemą, čia lankytojas saugiai pasirinks planą ir apmokės narystę.</p><div class="modal-price"><strong>2,99 € / mėn.</strong><span>Atšauk bet kada</span></div><button class="button" id="demo-unlock">Išbandyti atrakinimą</button><p class="small-print">Demonstraciniame variante pinigai nenuskaičiuojami.</p></dialog>
+    <script src="app.js"></script>
+    <script src="paywall.js"></script>
+    <script src="preferences.js"></script>
+    <script src="horoscope.js"></script>
+  </body>
+</html>
