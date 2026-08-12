@@ -429,3 +429,22 @@ color:#bdb3c5;
 [data-theme="dark"] input::placeholder {
     color:#aaa1b8 !important;
 }
+[data-theme="dark"] .price-card {
+    background:#252132 !important;
+    color:#ffffff !important;
+    border:1px solid #4b435d !important;
+}
+
+[data-theme="dark"] .price-card h2,
+[data-theme="dark"] .price-card h3,
+[data-theme="dark"] .price-card p,
+[data-theme="dark"] .price-card li,
+[data-theme="dark"] .price-card small {
+    color:#ffffff !important;
+}
+
+[data-theme="dark"] .price-card button {
+    background:#51456f !important;
+    color:#ffffff !important;
+    border:0 !important;
+}
