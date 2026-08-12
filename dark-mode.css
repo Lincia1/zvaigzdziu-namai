@@ -466,3 +466,17 @@ color:#bdb3c5;
 [data-theme="dark"] .nav-menu a:hover {
     color:#c9a8ff !important;
 }
+[data-theme="dark"] #nav {
+  background: #0f0e16;
+  border-color: #3e374b;
+}
+
+[data-theme="dark"] #nav a {
+  color: #f7f4fb;
+  background: transparent;
+}
+
+[data-theme="dark"] #nav a:hover {
+  background: #2d2740;
+  color: #ffffff;
+}
