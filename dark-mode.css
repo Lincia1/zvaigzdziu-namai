@@ -1,40 +1,282 @@
-[data-theme="dark"] body{
-background:#24202d;
-color:#f8f4fa;
+[data-theme="dark"] {
+  --dark-bg: #111018;
+  --dark-bg-2: #181521;
+  --dark-card: #211d2d;
+  --dark-card-2: #29243a;
+  --dark-border: #40384f;
+  --dark-text: #f7f4fb;
+  --dark-muted: #c5bdcf;
+  --dark-purple: #a995e8;
+  --dark-purple-dark: #7662ad;
 }
 
-[data-theme="dark"] .site-header{
-background:#30283b;
-border-color:#51465b;
+/* PAGRINDAS */
+[data-theme="dark"] body {
+  background: #111018;
+  color: #f7f4fb;
 }
 
-[data-theme="dark"] .hero{
-background:linear-gradient(120deg,#332b40 0%,#29313b 100%);
+/* VIRŠUTINIS MENIU */
+[data-theme="dark"] .site-header {
+  background: #181521;
+  border-color: #40384f;
+}
+
+[data-theme="dark"] .site-header a,
+[data-theme="dark"] .site-header button,
+[data-theme="dark"] nav a {
+  color: #f7f4fb;
+}
+
+/* HERO */
+[data-theme="dark"] .hero {
+  background: linear-gradient(120deg, #211c2d 0%, #171d28 100%);
 }
 
 [data-theme="dark"] .hero h1,
-[data-theme="dark"] .hero-copy{
-color:#fff;
+[data-theme="dark"] .hero-copy,
+[data-theme="dark"] .hero .lead {
+  color: #f7f4fb;
 }
 
-[data-theme="dark"] .hero .lead{
-color:#ddd4e4;
+[data-theme="dark"] .hero .lead {
+  color: #d5cedf;
 }
 
-[data-theme="dark"] .hero-orbit{
-border-color:#9b8bb2;
-background:#3a3245;
+/* HERO MYGTUKAI */
+[data-theme="dark"] .hero a,
+[data-theme="dark"] .hero button {
+  background: #8069b8;
+  color: #fff;
+  border-color: #8069b8;
 }
 
-[data-theme="dark"] .orbit-label{
-background:#3a3245;
-color:#f8f4fa;
-box-shadow:0 12px 35px #0008;
+/* SKYRIŲ FONAI */
+[data-theme="dark"] .today,
+[data-theme="dark"] .content-section,
+[data-theme="dark"] .names-section,
+[data-theme="dark"] .membership {
+  background: #111018;
+  border-color: #40384f;
 }
 
-[data-theme="dark"] .orbit-label strong{
-color:#fff;
+/* ANTRAŠTĖS */
+[data-theme="dark"] .section-heading h2,
+[data-theme="dark"] .section-copy h2,
+[data-theme="dark"] .content-section h2,
+[data-theme="dark"] .today h2,
+[data-theme="dark"] .names-section h2,
+[data-theme="dark"] .membership h2 {
+  color: #f7f4fb;
 }
+
+[data-theme="dark"] .section-heading p,
+[data-theme="dark"] .section-copy p,
+[data-theme="dark"] .content-section p {
+  color: #c5bdcf;
+}
+
+/* VISOS KORTELĖS */
+[data-theme="dark"] .feature-card,
+[data-theme="dark"] .daily-reading,
+[data-theme="dark"] .price-card,
+[data-theme="dark"] .article,
+[data-theme="dark"] .test-card,
+[data-theme="dark"] .quiz-card,
+[data-theme="dark"] .card {
+  background: #211d2d;
+  color: #f7f4fb;
+  border-color: #40384f;
+  box-shadow: 0 10px 35px #0008;
+}
+
+/* KORTELIŲ TEKSTAS */
+[data-theme="dark"] .feature-card h3,
+[data-theme="dark"] .feature-card h2,
+[data-theme="dark"] .feature-card p,
+[data-theme="dark"] .daily-reading h3,
+[data-theme="dark"] .daily-reading p,
+[data-theme="dark"] .price-card h3,
+[data-theme="dark"] .price-card p,
+[data-theme="dark"] .price-card li,
+[data-theme="dark"] .article h3,
+[data-theme="dark"] .article p,
+[data-theme="dark"] .test-card h2,
+[data-theme="dark"] .test-card h3,
+[data-theme="dark"] .test-card p,
+[data-theme="dark"] .quiz-card h2,
+[data-theme="dark"] .quiz-card h3,
+[data-theme="dark"] .quiz-card p,
+[data-theme="dark"] .card h2,
+[data-theme="dark"] .card h3,
+[data-theme="dark"] .card p {
+  color: #f7f4fb;
+}
+
+[data-theme="dark"] .feature-card p,
+[data-theme="dark"] .daily-reading p,
+[data-theme="dark"] .price-card li,
+[data-theme="dark"] .article p,
+[data-theme="dark"] .test-card p,
+[data-theme="dark"] .quiz-card p,
+[data-theme="dark"] .card p {
+  color: #c5bdcf;
+}
+
+/* SPALVOTOS KORTELĖS */
+[data-theme="dark"] .feature-card.lavender {
+  background: #29243a;
+}
+
+[data-theme="dark"] .feature-card.peach {
+  background: #35252c;
+}
+
+[data-theme="dark"] .feature-card.mint {
+  background: #202f2e;
+}
+
+/* NARIŲ / KAINOS BLOKAS */
+[data-theme="dark"] .membership {
+  background: #181521;
+}
+
+[data-theme="dark"] .price-card {
+  background: #211d2d;
+  border: 1px solid #40384f;
+}
+
+[data-theme="dark"] .price {
+  color: #f7f4fb;
+}
+
+[data-theme="dark"] .price small {
+  color: #c5bdcf;
+}
+
+/* PAYWALL */
+[data-theme="dark"] .paywall {
+  background: #211d2d;
+  color: #f7f4fb;
+  border-color: #40384f;
+}
+
+[data-theme="dark"] .paywall p {
+  color: #c5bdcf;
+}
+
+/* NAUJIENLAIŠKIS */
+[data-theme="dark"] .newsletter {
+  background: #202f2e;
+  color: #f7f4fb;
+}
+
+[data-theme="dark"] .newsletter h2,
+[data-theme="dark"] .newsletter p {
+  color: #f7f4fb;
+}
+
+[data-theme="dark"] .newsletter input {
+  background: #17161e;
+  color: #fff;
+  border-color: #514862;
+}
+
+[data-theme="dark"] .newsletter input::placeholder {
+  color: #aaa1b5;
+}
+
+[data-theme="dark"] .newsletter button {
+  background: #8069b8;
+  color: #fff;
+}
+
+/* TESTŲ ATSAKYMŲ MYGTUKAI */
+[data-theme="dark"] .zodiac-grid button,
+[data-theme="dark"] .test-card button,
+[data-theme="dark"] .quiz-card button {
+  background: #343047;
+  color: #fff;
+  border-color: #514966;
+}
+
+[data-theme="dark"] .zodiac-grid button:hover,
+[data-theme="dark"] .zodiac-grid button.active,
+[data-theme="dark"] .test-card button:hover,
+[data-theme="dark"] .quiz-card button:hover {
+  background: #8069b8;
+  color: #fff;
+}
+
+/* PAIEŠKA */
+[data-theme="dark"] .search-box input {
+  background: #17161e;
+  color: #fff;
+  border-color: #514862;
+}
+
+[data-theme="dark"] .search-box input::placeholder {
+  color: #aaa1b5;
+}
+
+/* ORBITA */
+[data-theme="dark"] .hero-orbit {
+  border-color: #8069b8;
+}
+
+[data-theme="dark"] .orbit-label {
+  background: #29243a;
+  color: #f7f4fb;
+  box-shadow: 0 12px 35px #0008;
+}
+
+[data-theme="dark"] .orbit-label strong {
+  color: #fff;
+}
+
+/* CTA */
+[data-theme="dark"] .cta {
+  background: linear-gradient(120deg, #211b2c, #46365f);
+  color: #fff;
+}
+
+[data-theme="dark"] .cta h2,
+[data-theme="dark"] .cta p {
+  color: #fff;
+}
+
+/* BENDRI MYGTUKAI */
+[data-theme="dark"] button,
+[data-theme="dark"] .btn {
+  color: #fff;
+}
+
+/* MODALAS */
+[data-theme="dark"] .modal-price {
+  background: #332b45;
+  color: #fff;
+}
+
+[data-theme="dark"] .close-modal {
+  color: #fff;
+}
+
+/* FOOTER */
+[data-theme="dark"] footer {
+  background: #0d0c12;
+  color: #f7f4fb;
+  border-top: 1px solid #40384f;
+}
+
+[data-theme="dark"] footer p {
+  color: #aaa1b5;
+}
+
+/* SKELBIMŲ VIETOS */
+[data-theme="dark"] .ad {
+  border-color: #40384f;
+  color: #857b91;
+  }}
 
 [data-theme="dark"] .today,
 [data-theme="dark"] .content-section{
