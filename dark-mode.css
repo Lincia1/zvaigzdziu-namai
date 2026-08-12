@@ -448,3 +448,21 @@ color:#bdb3c5;
     color:#ffffff !important;
     border:0 !important;
 }
+[data-theme="dark"] nav,
+[data-theme="dark"] .mobile-menu,
+[data-theme="dark"] .nav-menu {
+    background:#171522 !important;
+    color:#ffffff !important;
+}
+
+[data-theme="dark"] nav a,
+[data-theme="dark"] .mobile-menu a,
+[data-theme="dark"] .nav-menu a {
+    color:#f7f4fb !important;
+}
+
+[data-theme="dark"] nav a:hover,
+[data-theme="dark"] .mobile-menu a:hover,
+[data-theme="dark"] .nav-menu a:hover {
+    color:#c9a8ff !important;
+}
