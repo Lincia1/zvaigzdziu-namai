@@ -29,3 +29,8 @@
 }
 
 .legal-page{max-width:900px;margin:0 auto}.legal-page h1{font:48px Georgia,serif}.legal-page h2{margin-top:34px;font:28px Georgia,serif}.legal-page p{line-height:1.7;color:#655c69}
+.free-preview{color:var(--ink)}
+.free-preview>strong{display:block;color:var(--violet);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.free-preview>p{margin:0 0 12px;color:var(--ink)}
+.cookie-settings-link{border:0;background:none;color:#ddd5e2;text-decoration:none;font:inherit;font-size:13px;padding:0;cursor:pointer}
+.cookie-settings-link:hover{text-decoration:underline}

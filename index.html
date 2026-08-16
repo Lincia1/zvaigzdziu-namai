@@ -8,11 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="membership.css" />
-    <link rel="stylesheet" href="preferences.css" />
-    <link rel="stylesheet" href="horoscope.css" />
-    <link rel="stylesheet" href="dark-mode.css" />
+    <link rel="stylesheet" href="styles.css?v=20260816-2" />
+    <link rel="stylesheet" href="membership.css?v=20260816-2" />
+    <link rel="stylesheet" href="preferences.css?v=20260816-2" />
+    <link rel="stylesheet" href="horoscope.css?v=20260816-2" />
+    <link rel="stylesheet" href="dark-mode.css?v=20260816-2" />
   </head>
   <body>
     <header class="site-header">
@@ -36,7 +36,7 @@
           <a class="button" href="#horoskopai">Rasti savo ženklą <span>→</span></a>
         </div>
         <div class="hero-orbit" aria-hidden="true">
-          <span class="moon">☾</span><span class="star one">✦</span><span class="star two">✧</span><span class="orbit-label">Šiandien<br><strong>Rugpjūčio 5</strong></span>
+          <span class="moon">☾</span><span class="star one">✦</span><span class="star two">✧</span><span class="orbit-label">Šiandien<br><strong id="hero-date">Šiandien</strong></span>
         </div>
       </section>
 
@@ -106,7 +106,7 @@
           <label>Gimimo miestas<input id="birth-place" type="text" placeholder="Pvz., Vilnius" required></label>
           <label class="consent-row"><input id="personal-consent" type="checkbox" required> Sutinku, kad mano pateikti duomenys būtų naudojami šiam asmeniniam horoskopui parengti.</label>
           <button class="button" type="submit">Tęsti į užsakymą</button>
-          <p class="small-print">Horoskopai skirti pramogai ir savirefleksijai, o ne medicininiams, teisiniams ar finansiniams sprendimams.</p>
+          <p class="small-print">Asmeninis horoskopas yra pramoginio pobūdžio.</p>
         </form>
       </section>
       <section class="newsletter"><div><p class="eyebrow">Naujienlaiškis</p><h2>Savaitės įkvėpimas tavo pašte</h2><p>Vienas šiltas laiškas per savaitę. Be triukšmo.</p></div><form id="newsletter-form"><label class="sr-only" for="email">El. pašto adresas</label><input id="email" type="email" placeholder="tavo@elpastas.lt" required /><button class="button" type="submit">Prenumeruoti</button><p id="form-message" aria-live="polite"></p></form></section>
@@ -114,12 +114,11 @@
     <footer>
       <div>
         <a class="brand" href="#pradzia"><span class="brand-mark">✦</span> Žvaigždžių namai</a>
-        <p>Turinys skirtas pramogai ir bendram įkvėpimui.</p>
       </div>
       <nav class="footer-links" aria-label="Teisinė informacija">
         <a href="pirkimo-taisykles.html">Pirkimo taisyklės</a>
         <a href="privatumo-politika.html">Privatumo politika</a>
-        <a href="slapuku-politika.html">Slapukų politika</a>
+        <a href="slapuku-politika.html">Slapukų politika</a><button type="button" class="cookie-settings-link" id="cookie-settings">Slapukų nustatymai</button>
         <a href="sutarties-atsisakymas.html">Sutarties atsisakymas</a>
         <a href="kontaktai.html">Kontaktai</a>
       </nav>
@@ -134,11 +133,11 @@
         <a href="slapuku-politika.html">Sužinoti daugiau</a>
       </div>
     </div>
-    <dialog class="paywall" id="paywall"><button class="close-modal" aria-label="Uždaryti">×</button><p class="eyebrow">Pilna įžvalga</p><h2>Atrakink daugiau „Žvaigždžių namų“</h2><p>Šis demonstracinis langas rodo, kaip veiks mokamas turinys. Prijungus mokėjimų sistemą, čia lankytojas saugiai pasirinks planą ir apmokės narystę.</p><div class="modal-price"><strong>2,99 € / mėn.</strong><span>Atšauk bet kada</span></div><button class="button" id="demo-unlock">Išbandyti atrakinimą</button><p class="small-print">Demonstraciniame variante pinigai nenuskaičiuojami.</p></dialog>
-    <script src="app.js"></script>
-    <script src="personal-horoscope.js"></script>
-    <script src="paywall.js"></script>
-    <script src="preferences.js"></script>
-    <script src="horoscope.js"></script>
+    <dialog class="paywall" id="paywall"><button class="close-modal" aria-label="Uždaryti">×</button><p class="eyebrow">Pilna įžvalga</p><h2>Atrakink daugiau „Žvaigždžių namų“</h2><p>Šis demonstracinis langas rodo, kaip veiks mokamas turinys. Prijungus mokėjimų sistemą, čia lankytojas saugiai pasirinks planą ir apmokės narystę.</p><div class="modal-price"><strong>Mokamas turinys</strong><span>Kaina ir sąlygos rodomos prieš apmokėjimą</span></div><button class="button" id="demo-unlock">Išbandyti atrakinimą</button><p class="small-print"></p></dialog>
+    <script src="app.js?v=20260816-2"></script>
+    <script src="personal-horoscope.js?v=20260816-2"></script>
+    <script src="paywall.js?v=20260816-2"></script>
+    <script src="preferences.js?v=20260816-2"></script>
+    <script src="horoscope.js?v=20260816-2"></script>
   </body>
 </html>
