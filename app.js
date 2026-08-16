@@ -61,7 +61,6 @@ const nameAliases={
 };
 
 const dreamAliases={
-  paukstis:{preview:'Paukštis sapne dažnai siejamas su laisve, naujienomis, mintimis ir noru pakilti virš kasdienių rūpesčių.',full:'Paukštis sapne dažnai siejamas su laisve, naujienomis, mintimis ir noru pakilti virš kasdienių rūpesčių. Skrendantis paukštis gali simbolizuoti judėjimą pirmyn, o narve esantis – ribojamą laisvę ar nepasakytą norą. Sapno prasmę labiausiai papildo tavo jausmas sapne.'},
   paukstis:{preview:'Paukštis sapne dažnai siejamas su laisve, naujienomis, mintimis ir noru pakilti virš kasdienių rūpesčių.',full:'Paukštis sapne dažnai siejamas su laisve, naujienomis, mintimis ir noru pakilti virš kasdienių rūpesčių. Skrendantis paukštis gali simbolizuoti judėjimą pirmyn, o narve esantis – ribojamą laisvę ar nepasakytą norą. Sapno prasmę labiausiai papildo tavo jausmas sapne.'}
 };
 
@@ -70,8 +69,8 @@ function generatedNameEntry(raw){
   if(!name) return null;
   const first=name.charAt(0).toLocaleUpperCase('lt-LT')+name.slice(1);
   return {
-    preview:`${first} – trumpa nemokama vardo interpretacija pagal jo skambesį, nuotaiką ir simboliką.`,
-    full:`${first} – šio vardo simbolinėje interpretacijoje dera savitumas, smalsumas ir asmeninis ryžtas. Vardo skambesys gali priminti apie žmogų, kuris nori atrasti savo kelią, vertina artimus ryšius ir nebijo pradėti iš naujo. Tai pramoginė interpretacija, todėl ji nėra skirta tiksliai apibūdinti konkretaus žmogaus charakterį ar gyvenimą.`
+    preview:`${first} – trumpa nemokama vardo interpretacija pagal jo skambesį, nuotaiką ir simboliką. Ši ištrauka sugeneruota pagal tavo įvestą vardą, todėl gali ieškoti ir vardo, kurio nėra populiariausių sąraše.`,
+    full:`${first} – išsamesnėje simbolinėje interpretacijoje dera savitumas, smalsumas ir asmeninis ryžtas. Vardo skambesys gali priminti apie žmogų, kuris nori atrasti savo kelią, vertina artimus ryšius ir nebijo pradėti iš naujo. Tai pramoginė interpretacija, todėl ji nėra skirta tiksliai apibūdinti konkretaus žmogaus charakterį ar gyvenimą.`
   };
 }
 

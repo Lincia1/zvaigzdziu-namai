@@ -8,11 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20260816-4" />
-    <link rel="stylesheet" href="membership.css?v=20260816-4" />
-    <link rel="stylesheet" href="preferences.css?v=20260816-4" />
-    <link rel="stylesheet" href="horoscope.css?v=20260816-4" />
-    <link rel="stylesheet" href="dark-mode.css?v=20260816-4" />
+    <link rel="stylesheet" href="styles.css?v=20260816-5" />
+    <link rel="stylesheet" href="membership.css?v=20260816-5" />
+    <link rel="stylesheet" href="preferences.css?v=20260816-5" />
+    <link rel="stylesheet" href="horoscope.css?v=20260816-5" />
+    <link rel="stylesheet" href="dark-mode.css?v=20260816-5" />
   </head>
   <body>
     <header class="site-header">
@@ -60,13 +60,13 @@
       </section>
 
       <section class="content-section split-section" id="sapnininkas" aria-labelledby="dream-title">
-        <div class="section-copy"><p class="eyebrow">Sapnininkas</p><h2 id="dream-title">Sapnai kalba simboliais</h2><p>Įvesk žodį, kurį prisimeni iš sapno. Čia rasi trumpas, smalsumą žadinančias interpretacijas.</p><div class="search-box"><label class="sr-only" for="dream-search">Ieškoti sapno simbolio</label><input id="dream-search" type="search" placeholder="Pvz., vanduo, šuo, dantys" /><button id="dream-button">Ieškoti</button></div><div id="dream-result" class="search-result" aria-live="polite">Populiarūs: <button data-dream="vanduo">vanduo</button>, <button data-dream="šuo">šuo</button>, <button data-dream="dantys">dantys</button>, <button data-dream="katė">katė</button></div></div>
+        <div class="section-copy"><p class="eyebrow">Sapnininkas</p><h2 id="dream-title">Sapnai kalba simboliais</h2><p>Įvesk žodį, kurį prisimeni iš sapno. Čia rasi trumpas, smalsumą žadinančias interpretacijas.</p><div class="search-box"><label class="sr-only" for="dream-search">Ieškoti sapno simbolio</label><input id="dream-search" type="search" placeholder="Įvesk bet kokį sapno žodį, pvz. vanduo" /><button id="dream-button">Ieškoti</button></div><div id="dream-result" class="search-result" aria-live="polite"><span class="search-hint">Įvesk bet kokį sapno žodį. Populiarūs žodžiai žemiau – tik pavyzdžiai:</span> <button data-dream="vanduo">vanduo</button>, <button data-dream="šuo">šuo</button>, <button data-dream="dantys">dantys</button>, <button data-dream="katė">katė</button>, <button data-dream="paukštis">paukštis</button>, <button data-dream="ugnis">ugnis</button>, <button data-dream="namas">namas</button>, <button data-dream="kelionė">kelionė</button></div></div>
         <div class="illustration dream-illustration" aria-hidden="true"><span>☾</span><i class="cloud c1"></i><i class="cloud c2"></i><b>✦</b></div>
       </section>
 
       <section class="content-section names-section" id="vardai" aria-labelledby="name-title">
         <div class="section-heading"><div><p class="eyebrow">Vardų reikšmės</p><h2 id="name-title">Kiekvienas vardas turi savo istoriją</h2></div></div>
-        <div class="names-layout"><div class="name-search"><label for="name-search">Sužinok vardo reikšmę</label><div class="search-box"><input id="name-search" type="search" placeholder="Įvesk vardą" /><button id="name-button">Rasti</button></div><div id="name-result" class="search-result" aria-live="polite">Išbandyk: <button data-name="Austėja">Austėja</button>, <button data-name="Lina">Lina</button>, <button data-name="Lukas">Lukas</button>, <button data-name="Emilija">Emilija</button></div></div><div class="popular-names"><h3>Populiarūs vardai</h3><div class="name-pills"><button data-name="Austėja">Austėja</button><button data-name="Lukas">Lukas</button><button data-name="Emilija">Emilija</button><button data-name="Matas">Matas</button><button data-name="Gabija">Gabija</button><button data-name="Nojus">Nojus</button></div></div></div>
+        <div class="names-layout"><div class="name-search"><label for="name-search">Sužinok vardo reikšmę</label><div class="search-box"><input id="name-search" type="search" placeholder="Įvesk bet kokį vardą" /><button id="name-button">Rasti</button></div><div id="name-result" class="search-result" aria-live="polite"><span class="search-hint">Gali įvesti bet kokį vardą. Populiarūs vardai žemiau – tik pavyzdžiai:</span> <button data-name="Austėja">Austėja</button>, <button data-name="Lina">Lina</button>, <button data-name="Lukas">Lukas</button>, <button data-name="Emilija">Emilija</button>, <button data-name="Matas">Matas</button>, <button data-name="Gabija">Gabija</button>, <button data-name="Nojus">Nojus</button>, <button data-name="Klaudija">Klaudija</button></div></div><div class="popular-names"><h3>Populiarūs vardai <span class="popular-note">– tik pavyzdžiai</span></h3><div class="name-pills"><button data-name="Austėja">Austėja</button><button data-name="Lukas">Lukas</button><button data-name="Emilija">Emilija</button><button data-name="Matas">Matas</button><button data-name="Gabija">Gabija</button><button data-name="Nojus">Nojus</button></div></div></div>
       </section>
 
       <section class="content-section quiz-section" id="testai" aria-labelledby="quiz-title">
@@ -105,9 +105,10 @@
           <label>Gimimo laikas<input id="birth-time" type="time"></label>
           <label>Gimimo miestas<input id="birth-place" type="text" placeholder="Pvz., Vilnius" required></label>
           <label class="consent-row"><input id="personal-consent" type="checkbox" required> Sutinku, kad mano pateikti duomenys būtų naudojami šiam asmeniniam horoskopui parengti.</label>
-          <button class="button" type="submit">Tęsti į užsakymą</button>
-          <p class="small-print">Asmeninis horoskopas yra pramoginio pobūdžio.</p>
+          <button class="button" type="submit">Gauti nemokamą ištrauką</button>
+          <p class="small-print">Pirmiausia pamatysi trumpą, tavo duomenims pritaikytą ištrauką. Pilna analizė – mokama. Asmeninis horoskopas yra pramoginio pobūdžio.</p>
         </form>
+        <div id="personal-horoscope-preview" class="personal-preview" aria-live="polite"></div>
       </section>
       <section class="newsletter"><div><p class="eyebrow">Naujienlaiškis</p><h2>Savaitės įkvėpimas tavo pašte</h2><p>Vienas šiltas laiškas per savaitę. Be triukšmo.</p></div><form id="newsletter-form"><label class="sr-only" for="email">El. pašto adresas</label><input id="email" type="email" placeholder="tavo@elpastas.lt" required /><button class="button" type="submit">Prenumeruoti</button><p id="form-message" aria-live="polite"></p></form></section>
     </main>
@@ -134,10 +135,10 @@
       </div>
     </div>
     <dialog class="paywall" id="paywall"><button class="close-modal" aria-label="Uždaryti">×</button><p class="eyebrow">Pilna įžvalga</p><h2>Atrakink daugiau „Žvaigždžių namų“</h2><p>Šis demonstracinis langas rodo, kaip veiks mokamas turinys. Prijungus mokėjimų sistemą, čia lankytojas saugiai pasirinks planą ir apmokės narystę.</p><div class="modal-price"><strong>Mokamas turinys</strong><span>Kaina ir sąlygos rodomos prieš apmokėjimą</span></div><button class="button" id="demo-unlock">Išbandyti atrakinimą</button><p class="small-print"></p></dialog>
-    <script src="app.js?v=20260816-4"></script>
-    <script src="personal-horoscope.js?v=20260816-4"></script>
-    <script src="paywall.js?v=20260816-4"></script>
-    <script src="preferences.js?v=20260816-4"></script>
-    <script src="horoscope.js?v=20260816-4"></script>
+    <script src="app.js?v=20260816-5"></script>
+    <script src="personal-horoscope.js?v=20260816-5"></script>
+    <script src="paywall.js?v=20260816-5"></script>
+    <script src="preferences.js?v=20260816-5"></script>
+    <script src="horoscope.js?v=20260816-5"></script>
   </body>
 </html>

@@ -16,6 +16,9 @@ function openPaywall(type='premium', key='') {
   } else if (type === 'dream') {
     if (title) title.textContent = 'Pilna sapno reikšmė';
     if (text) text.textContent = 'Trumpa sapno simbolio reikšmė prieinama nemokamai. Išsamesnę interpretaciją gali perskaityti po apmokėjimo.';
+  } else if (type === 'personal') {
+    if (title) title.textContent = 'Pilnas asmeninis horoskopas';
+    if (text) text.textContent = 'Nemokamą ištrauką jau matei. Pilname horoskope būtų išsamesnė analizė pagal tavo gimimo datą, laiką ir miestą: asmenybė, santykiai, darbas, pinigai ir artimiausio laikotarpio prognozė.';
   } else {
     if (title) title.textContent = 'Atrakink daugiau „Žvaigždžių namų“';
     if (text) text.textContent = 'Čia lankytojas pasirinks mokamą turinį ir apmokės už pasirinktą paslaugą. Mokėjimų sistema bus prijungta prieš paleidžiant tikrus mokėjimus.';
