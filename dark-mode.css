@@ -32,3 +32,7 @@
 [data-theme="dark"] .cookie-banner p{color:#c5bdcf}
 [data-theme="dark"] .cookie-actions button{background:#302a3b;color:#fff;border-color:#514862}
 [data-theme="dark"] .cookie-actions .button{background:#8069b8!important}
+
+[data-theme="dark"] .premium-locked-card{background:#302a43;color:#f7f4fb;border-color:#514862}
+[data-theme="dark"] .premium-locked-card span{color:#d6cede}
+[data-theme="dark"] .reading-date{color:#c5bdcf}
