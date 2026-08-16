@@ -54,7 +54,7 @@
 
       <section class="content-section horoscope-section" id="horoskopai" aria-labelledby="horoscope-title">
         <div class="section-heading"><div><p class="eyebrow">Horoskopai</p><h2 id="horoscope-title">Rask savo žvaigždžių ženklą</h2><p>Lengvas dienos įkvėpimas – tik pramogai ir gerai nuotaikai.</p></div><button class="text-button" id="show-all-signs">Visi ženklai</button></div>
-        <div class="horoscope-tabs" role="tablist" aria-label="Horoskopo laikotarpis"><button class="active" type="button" data-period="daily">Dienos</button><button type="button" data-period="monthly">Mėnesio</button></div>
+        <div class="free-badge">Dienos horoskopai – nemokamai</div>
         <div class="zodiac-grid" id="zodiac-grid"></div>
         <article class="daily-reading" id="daily-reading" aria-live="polite"><p class="reading-label">Pasirink ženklą</p><h3>Tavo dienos žinutė laukia čia</h3><p>Spustelėk savo Zodiako ženklą ir perskaityk trumpą įkvėpimą.</p></article>
       </section>
@@ -75,14 +75,68 @@
       </section>
 
       <section class="membership" id="naryste" aria-labelledby="membership-title">
-        <div><p class="eyebrow">Žvaigždžių klubas</p><h2 id="membership-title">Daugiau erdvės tavo smalsumui</h2><p>Nemokamai gali skaityti trumpas įžvalgas. Klubo nariai mato pilnas interpretacijas, išsamius horoskopus ir specialius testus.</p></div>
-        <div class="price-card"><p class="plan-name">Klubo narystė</p><p class="price">2,99 € <small>/ mėn.</small></p><ul><li>Pilni dienos horoskopai</li><li>Išplėstinės sapnų ir vardų reikšmės</li><li>Nauji testai anksčiau už kitus</li></ul><button class="button open-paywall">Sužinoti daugiau</button></div>
+        <div>
+          <p class="eyebrow">Žvaigždžių klubas</p>
+          <h2 id="membership-title">Asmeninis horoskopas pagal tavo gimimo duomenis</h2>
+          <p>Dienos horoskopai yra nemokami. Jei nori gilesnės, individualiai tavo gimimo duomenims pritaikytos analizės, gali užsisakyti mokamą asmeninį horoskopą.</p>
+        </div>
+        <div class="price-card">
+          <p class="plan-name">Asmeninis horoskopas</p>
+          <p class="price">Kaina bus rodoma prieš apmokėjimą</p>
+          <ul>
+            <li>Gimimo datos ir laiko analizė</li>
+            <li>Asmenybė, santykiai, darbas ir pinigai</li>
+            <li>Individuali artimiausio laikotarpio prognozė</li>
+          </ul>
+          <a class="button" href="#asmeninis-horoskopas">Užsisakyti</a>
+        </div>
+      </section>
+
+      <section class="content-section personal-horoscope-section" id="asmeninis-horoskopas" aria-labelledby="personal-horoscope-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Mokama paslauga</p>
+            <h2 id="personal-horoscope-title">Tavo asmeninis horoskopas</h2>
+            <p>Įvesk gimimo duomenis. Prieš apmokėjimą aiškiai matysi, ką gausi ir kiek kainuos užsakymas.</p>
+          </div>
+        </div>
+        <form id="personal-horoscope-form" class="personal-form">
+          <label>Gimimo data<input id="birth-date" type="date" required></label>
+          <label>Gimimo laikas<input id="birth-time" type="time"></label>
+          <label>Gimimo miestas<input id="birth-place" type="text" placeholder="Pvz., Vilnius" required></label>
+          <label class="consent-row"><input id="personal-consent" type="checkbox" required> Sutinku, kad mano pateikti duomenys būtų naudojami šiam asmeniniam horoskopui parengti.</label>
+          <button class="button" type="submit">Tęsti į užsakymą</button>
+          <p class="small-print">Horoskopai skirti pramogai ir savirefleksijai, o ne medicininiams, teisiniams ar finansiniams sprendimams.</p>
+        </form>
       </section>
       <section class="newsletter"><div><p class="eyebrow">Naujienlaiškis</p><h2>Savaitės įkvėpimas tavo pašte</h2><p>Vienas šiltas laiškas per savaitę. Be triukšmo.</p></div><form id="newsletter-form"><label class="sr-only" for="email">El. pašto adresas</label><input id="email" type="email" placeholder="tavo@elpastas.lt" required /><button class="button" type="submit">Prenumeruoti</button><p id="form-message" aria-live="polite"></p></form></section>
     </main>
-    <footer><a class="brand" href="#pradzia"><span class="brand-mark">✦</span> Žvaigždžių namai</a><p>Turinys skirtas pramogai ir bendram įkvėpimui.</p><p>© <span id="year"></span> Žvaigždžių namai</p></footer>
+    <footer>
+      <div>
+        <a class="brand" href="#pradzia"><span class="brand-mark">✦</span> Žvaigždžių namai</a>
+        <p>Turinys skirtas pramogai ir bendram įkvėpimui.</p>
+      </div>
+      <nav class="footer-links" aria-label="Teisinė informacija">
+        <a href="pirkimo-taisykles.html">Pirkimo taisyklės</a>
+        <a href="privatumo-politika.html">Privatumo politika</a>
+        <a href="slapuku-politika.html">Slapukų politika</a>
+        <a href="sutarties-atsisakymas.html">Sutarties atsisakymas</a>
+        <a href="kontaktai.html">Kontaktai</a>
+      </nav>
+      <p>© <span id="year"></span> Žvaigždžių namai</p>
+    </footer>
+
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Slapukų nustatymai">
+      <div><strong>Slapukai</strong><p>Naudojame būtinus slapukus svetainės veikimui. Nebūtini analitiniai ar rinkodaros slapukai gali būti naudojami tik gavus tavo sutikimą.</p></div>
+      <div class="cookie-actions">
+        <button id="cookie-reject" type="button">Nesutinku</button>
+        <button id="cookie-accept" class="button" type="button">Sutinku</button>
+        <a href="slapuku-politika.html">Sužinoti daugiau</a>
+      </div>
+    </div>
     <dialog class="paywall" id="paywall"><button class="close-modal" aria-label="Uždaryti">×</button><p class="eyebrow">Pilna įžvalga</p><h2>Atrakink daugiau „Žvaigždžių namų“</h2><p>Šis demonstracinis langas rodo, kaip veiks mokamas turinys. Prijungus mokėjimų sistemą, čia lankytojas saugiai pasirinks planą ir apmokės narystę.</p><div class="modal-price"><strong>2,99 € / mėn.</strong><span>Atšauk bet kada</span></div><button class="button" id="demo-unlock">Išbandyti atrakinimą</button><p class="small-print">Demonstraciniame variante pinigai nenuskaičiuojami.</p></dialog>
     <script src="app.js"></script>
+    <script src="personal-horoscope.js"></script>
     <script src="paywall.js"></script>
     <script src="preferences.js"></script>
     <script src="horoscope.js"></script>

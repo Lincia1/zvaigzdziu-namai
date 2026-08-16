@@ -9,3 +9,22 @@ languageSelect.value=localStorage.getItem('language')||'lt';applyLanguage(langua
 const themeToggle=document.querySelector('#theme-toggle');
 function applyTheme(theme){document.documentElement.dataset.theme=theme;themeToggle.textContent=theme==='dark'?'☀':'☾';themeToggle.setAttribute('aria-label',theme==='dark'?'Įjungti šviesų foną':'Įjungti tamsų foną');localStorage.setItem('theme',theme)}
 applyTheme(localStorage.getItem('theme')||'light');themeToggle.addEventListener('click',()=>applyTheme(document.documentElement.dataset.theme==='dark'?'light':'dark'));
+
+
+const cookieBanner = document.querySelector('#cookie-banner');
+const cookieAccept = document.querySelector('#cookie-accept');
+const cookieReject = document.querySelector('#cookie-reject');
+
+function hideCookieBanner() {
+  if (cookieBanner) cookieBanner.hidden = true;
+}
+
+if (localStorage.getItem('zvaigzdziu-cookie-choice')) hideCookieBanner();
+if (cookieAccept) cookieAccept.addEventListener('click', () => {
+  localStorage.setItem('zvaigzdziu-cookie-choice', 'accepted');
+  hideCookieBanner();
+});
+if (cookieReject) cookieReject.addEventListener('click', () => {
+  localStorage.setItem('zvaigzdziu-cookie-choice', 'rejected');
+  hideCookieBanner();
+});
