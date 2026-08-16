@@ -23,7 +23,7 @@ const dreams={
 };
 
 const names={
-  const names={
+
 austėja:{
 preview:'Austėja – lietuvių kilmės vardas, siejamas su bitėmis, šeimos gerove, globa ir darbštumu.',
 full:'Austėja – lietuvių mitologijoje siejama su bičių globėja ir šeimos gerove. Vardo simbolikoje atsiskleidžia darbštumas, rūpestingumas, šeimos jaukumas ir gebėjimas kurti saugią aplinką.'
