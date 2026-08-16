@@ -52,14 +52,63 @@ signs.forEach(([symbol,name,date,text])=>{
 
 document.querySelector('#show-all-signs').addEventListener('click',()=>grid.scrollIntoView({behavior:'smooth',block:'center'}));
 
+function normalizeSearch(value){
+  return value.trim().toLocaleLowerCase('lt-LT').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+}
+
+const nameAliases={
+  klaudija:{preview:'Klaudija – švelniai skambantis vardas, kurio interpretacijoje dera elegancija, smalsumas ir savarankiškumas.',full:'Klaudija – švelniai skambantis vardas, kurio interpretacijoje dera elegancija, smalsumas ir savarankiškumas. Simboliškai šis vardas gali būti siejamas su žmogumi, kuris moka pastebėti detales, turi savo nuomonę ir vertina artimus ryšius. Vardo interpretacija čia yra pramoginė ir paremta simbolika, o ne asmens charakterio nustatymas.'}
+};
+
+const dreamAliases={
+  paukstis:{preview:'Paukštis sapne dažnai siejamas su laisve, naujienomis, mintimis ir noru pakilti virš kasdienių rūpesčių.',full:'Paukštis sapne dažnai siejamas su laisve, naujienomis, mintimis ir noru pakilti virš kasdienių rūpesčių. Skrendantis paukštis gali simbolizuoti judėjimą pirmyn, o narve esantis – ribojamą laisvę ar nepasakytą norą. Sapno prasmę labiausiai papildo tavo jausmas sapne.'},
+  paukstis:{preview:'Paukštis sapne dažnai siejamas su laisve, naujienomis, mintimis ir noru pakilti virš kasdienių rūpesčių.',full:'Paukštis sapne dažnai siejamas su laisve, naujienomis, mintimis ir noru pakilti virš kasdienių rūpesčių. Skrendantis paukštis gali simbolizuoti judėjimą pirmyn, o narve esantis – ribojamą laisvę ar nepasakytą norą. Sapno prasmę labiausiai papildo tavo jausmas sapne.'}
+};
+
+function generatedNameEntry(raw){
+  const name=raw.trim();
+  if(!name) return null;
+  const first=name.charAt(0).toLocaleUpperCase('lt-LT')+name.slice(1);
+  return {
+    preview:`${first} – trumpa nemokama vardo interpretacija pagal jo skambesį, nuotaiką ir simboliką.`,
+    full:`${first} – šio vardo simbolinėje interpretacijoje dera savitumas, smalsumas ir asmeninis ryžtas. Vardo skambesys gali priminti apie žmogų, kuris nori atrasti savo kelią, vertina artimus ryšius ir nebijo pradėti iš naujo. Tai pramoginė interpretacija, todėl ji nėra skirta tiksliai apibūdinti konkretaus žmogaus charakterį ar gyvenimą.`
+  };
+}
+
+function generatedDreamEntry(raw){
+  const word=raw.trim();
+  if(!word) return null;
+  const w=normalizeSearch(word);
+  const categories=[
+    {keys:['vand','jura','ezer','lietus','banga','basein'],preview:'Šis sapno simbolis dažnai gali būti siejamas su emocijomis, jų kaita ir vidine būsena.',full:'Šis sapno simbolis gali būti siejamas su emocijomis, jų kaita ir vidine būsena. Ramus vaizdas dažnai interpretuojamas kaip pusiausvyra, o audringas – kaip stipresni jausmai ar pokyčiai. Pagalvok, ką tuo metu jautei ir kas vyksta tavo kasdienybėje.'},
+    {keys:['nam','but','kamb','dur','lang'],preview:'Namų ir erdvių simboliai sapnuose dažnai siejami su saugumu, asmenine erdve ir gyvenimo pokyčiais.',full:'Namų ir erdvių simboliai sapnuose dažnai siejami su saugumu, asmenine erdve ir gyvenimo pokyčiais. Nauja ar nepažįstama vieta gali simbolizuoti naują etapą, o pažįstami namai – grįžimą prie svarbių prisiminimų ar jausmų.'},
+    {keys:['kel','auto','masin','traukin','lektuv','skryd'],preview:'Kelionės simboliai sapnuose dažnai siejami su kryptimi, sprendimais ir noru keisti kasdienybę.',full:'Kelionės simboliai sapnuose dažnai siejami su kryptimi, sprendimais ir noru keisti kasdienybę. Važiavimas ar skridimas gali priminti apie judėjimą pirmyn, o pasiklydimas – apie neapsisprendimą. Svarbu, ar kelionė buvo maloni, ar kėlė nerimą.'},
+    {keys:['gyvat','vor','bite','pauk','arkl','kate','suo','vilk','liut','mešk','gyvun'],preview:'Gyvūno simbolis sapne dažnai siejamas su instinktais, santykiais ir tuo, kaip jautiesi tam tikroje situacijoje.',full:'Gyvūno simbolis sapne dažnai siejamas su instinktais, santykiais ir tavo reakcijomis į aplinką. Draugiškas gyvūnas gali priminti apie artumą ar pasitikėjimą, o grėsmingas – apie ribas, baimę ar įtampą. Reikšmę labai keičia gyvūno elgesys ir tavo jausmas sapne.'},
+    {keys:['dant','plauk','krau','liga','skaud'],preview:'Kūno simboliai sapnuose dažnai pasirodo nerimo, pokyčių ar didesnio dėmesio sau laikotarpiais.',full:'Kūno simboliai sapnuose dažnai pasirodo nerimo, pokyčių ar didesnio dėmesio sau laikotarpiais. Jie gali simboliškai atspindėti pasitikėjimą savimi, pažeidžiamumą, nuovargį ar norą kažką pakeisti. Sapno nereikėtų vertinti kaip medicininės prognozės.'},
+    {keys:['ugni','gaisr','dūm','dumu','saul','žaib','snieg','led','audr'],preview:'Gamtos ir stichijų simboliai dažnai siejami su stipriomis emocijomis, energija ir pokyčiais.',full:'Gamtos ir stichijų simboliai dažnai siejami su stipriomis emocijomis, energija ir pokyčiais. Šviesa ar šiluma gali simbolizuoti gyvybingumą, o audra ar ugnis – stiprų vidinį judėjimą. Pagalvok, ar sapne jautei ramybę, baimę, susižavėjimą ar įtampą.'}
+  ];
+  const match=categories.find(c=>c.keys.some(k=>w.includes(k)));
+  if(match) return {preview:`${word.charAt(0).toLocaleUpperCase('lt-LT')+word.slice(1)}. ${match.preview}`,full:`${word.charAt(0).toLocaleUpperCase('lt-LT')+word.slice(1)}. ${match.full}`};
+  return {preview:`${word.charAt(0).toLocaleUpperCase('lt-LT')+word.slice(1)} sapne gali būti interpretuojamas kaip asmeninių minčių, emocijų ar pokyčių simbolis.`,full:`${word.charAt(0).toLocaleUpperCase('lt-LT')+word.slice(1)} sapne gali būti interpretuojamas kaip asmeninių minčių, emocijų ar pokyčių simbolis. Jo reikšmė gali priklausyti nuo to, kas vyko sapne, kokius žmones ar vietas matei ir kokias emocijas patyrei. Kartais vienas simbolis tėra dienos įspūdžių atspindys, todėl verta žiūrėti į visą sapno istoriją.`};
+}
+
+function findEntry(type,raw){
+  const data=type==='dream'?dreams:names;
+  const key=normalizeSearch(raw);
+  if(!key) return null;
+  const source={...data,...(type==='dream'?dreamAliases:nameAliases)};
+  const matchedKey=Object.keys(source).find(k=>normalizeSearch(k)===key);
+  if(matchedKey) return source[matchedKey];
+  return type==='dream' ? generatedDreamEntry(raw) : generatedNameEntry(raw);
+}
+
 function freePreview(type){
   const input=document.querySelector(`#${type}-search`);
   const result=document.querySelector(`#${type}-result`);
-  const data=type==='dream'?dreams:names;
-  const key=input.value.trim().toLocaleLowerCase('lt');
-  const item=data[key];
+  const key=normalizeSearch(input.value);
+  const item=findEntry(type,input.value);
   if(!item){
-    result.innerHTML=`<span>Šio įrašo dar nėra. Išbandyk vieną iš populiarių pasirinkimų.</span>`;
+    result.innerHTML='<span>Įrašyk žodį arba vardą, kurio ieškai.</span>';
     return;
   }
   const label=type==='dream'?'sapno reikšmė':'vardo reikšmė';
@@ -68,15 +117,15 @@ function freePreview(type){
     <p>${item.preview}</p>
     <div class="premium-locked-card">
       <strong>Pilna ${label} – mokama</strong>
-      <span>Išsamesnė interpretacija, simboliai ir papildoma informacija.</span>
+      <span>Išsamesnė interpretacija, simbolika ir papildoma informacija.</span>
       <button type="button" class="unlock-inline open-paywall" data-premium-type="${type}" data-premium-key="${key}">Skaityti visą</button>
     </div>
   </div>`;
 }
 
 function revealPremium(type,key){
-  const data=type==='dream'?dreams:names;
-  const item=data[key];
+  const raw=key;
+  const item=findEntry(type,raw);
   const result=document.querySelector(`#${type}-result`);
   if(!item||!result) return;
   const label=type==='dream'?'sapno reikšmė':'vardo reikšmė';
