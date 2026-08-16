@@ -16,7 +16,10 @@ const cookieAccept = document.querySelector('#cookie-accept');
 const cookieReject = document.querySelector('#cookie-reject');
 
 function hideCookieBanner() {
-  if (cookieBanner) cookieBanner.hidden = true;
+  if (cookieBanner) {
+    cookieBanner.hidden = true;
+    cookieBanner.setAttribute('aria-hidden', 'true');
+  }
 }
 
 if (localStorage.getItem('zvaigzdziu-cookie-choice')) hideCookieBanner();
@@ -27,4 +30,12 @@ if (cookieAccept) cookieAccept.addEventListener('click', () => {
 if (cookieReject) cookieReject.addEventListener('click', () => {
   localStorage.setItem('zvaigzdziu-cookie-choice', 'rejected');
   hideCookieBanner();
+});
+const cookieSettings = document.querySelector('#cookie-settings');
+if (cookieSettings) cookieSettings.addEventListener('click', () => {
+  localStorage.removeItem('zvaigzdziu-cookie-choice');
+  if (cookieBanner) {
+    cookieBanner.hidden = false;
+    cookieBanner.setAttribute('aria-hidden', 'false');
+  }
 });
