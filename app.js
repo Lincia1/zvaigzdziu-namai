@@ -14,18 +14,22 @@ const signs=[
 ];
 
 const dreams={
-  vanduo:'Vanduo sapnuose dažnai siejamas su emocijomis ir jų tėkme. Prisiminkite, ar jis buvo ramus, ar audringas.',
-  šuo:'Šuo dažnai simbolizuoja draugystę, ištikimybę arba poreikį labiau pasitikėti savo aplinka.',
-  dantys:'Dantų sapnai neretai pasirodo pokyčių ar nerimo laikotarpiais. Tai kvietimas švelniai pasirūpinti savimi.'
+  vanduo:{preview:'Vanduo sapnuose dažnai siejamas su emocijomis ir jų tėkme.',full:'Vanduo sapnuose dažnai siejamas su emocijomis ir jų tėkme. Ramus vanduo gali simbolizuoti vidinę pusiausvyrą, o audringas – stipresnius jausmus ar pokyčius. Svarbu prisiminti, kaip jauteisi sapne ir koks buvo vanduo.'},
+  šuo:{preview:'Šuo dažnai simbolizuoja draugystę, ištikimybę arba pasitikėjimą.',full:'Šuo dažnai simbolizuoja draugystę, ištikimybę arba poreikį labiau pasitikėti savo aplinka. Draugiškas šuo gali priminti apie artimą žmogų, o grėsmingas – apie ribas ar nepasitikėjimą. Sapno nuotaika čia ypač svarbi.'},
+  dantys:{preview:'Dantų sapnai neretai pasirodo pokyčių ar nerimo laikotarpiais.',full:'Dantų sapnai neretai pasirodo pokyčių ar nerimo laikotarpiais. Jie gali būti siejami su pasitikėjimu savimi, išvaizda, bendravimu ar jausmu, kad prarandama kontrolė. Pažiūrėkime, kas šiuo metu tavo gyvenime keičiasi.'},
+  katė:{preview:'Katė sapne dažnai siejama su intuicija, savarankiškumu ir paslaptimi.',full:'Katė sapne dažnai siejama su intuicija, savarankiškumu ir paslaptimi. Meili katė gali simbolizuoti artumą ir švelnumą, o besislepianti ar agresyvi – nepasitikėjimą arba neįvardytus jausmus. Atkreipk dėmesį į katės elgesį ir savo emocijas.'},
+  ugnis:{preview:'Ugnis sapnuose gali simbolizuoti energiją, aistrą arba didelį pokytį.',full:'Ugnis sapnuose gali simbolizuoti energiją, aistrą arba didelį pokytį. Šilta, jauki ugnis gali reikšti saugumą, o nekontroliuojama liepsna – stiprias emocijas ar situaciją, kurią sunku suvaldyti.'},
+  gyvatė:{preview:'Gyvatė dažnai siejama su pokyčiu, atsargumu ir paslėptomis baimėmis.',full:'Gyvatė dažnai siejama su pokyčiu, atsargumu ir paslėptomis baimėmis. Kartais ji simbolizuoja atsinaujinimą, nes gyvatė keičia odą. Svarbu, ar sapne jautei baimę, smalsumą ar ramybę.'}
 };
 
 const names={
-  austėja:'Austėja – lietuvių mitologijoje su bitėmis, šeimos gerove ir globa siejamas vardas.',
-  lukas:'Lukas – vardas, siejamas su šviesa; jo kilmė siejama su graikų kalbos žodžiu „šviesus“.',
-  emilija:'Emilija – lotyniškos kilmės vardas, dažnai siejamas su atkaklumu ir noru tobulėti.',
-  matas:'Matas – hebrajiškos kilmės vardas, tradiciškai aiškinamas kaip „Dievo dovana“.',
-  gabija:'Gabija – lietuvių mitologijos ugnies ir namų židinio globėjos vardas.',
-  nojus:'Nojus – hebrajiškos kilmės vardas, siejamas su ramybe ir atokvėpiu.'
+  austėja:{preview:'Austėja – lietuvių mitologijoje su bitėmis, šeimos gerove ir globa siejamas vardas.',full:'Austėja – lietuvių mitologijoje su bitėmis, šeimos gerove ir globa siejamas vardas. Vardas dažnai interpretuojamas per darbštumo, rūpestingumo ir šeimos jaukumo simboliką. Vardo istorija gražiai siejasi su lietuviška kultūra.'},
+  lina:{preview:'Lina – trumpas, skambus vardas, siejamas su lietuvišku žodžiu „linas“ ir natūralumu.',full:'Lina – trumpas, skambus vardas, siejamas su lietuvišku žodžiu „linas“ ir natūralumu. Simboliškai šis vardas gali būti siejamas su paprastumu, švelnumu ir vidine tvirtybe. Vardo reikšmę galima pažvelgti ir per jo skambesį bei kultūrinį kontekstą.'},
+  lukas:{preview:'Lukas – tradicinis vardas, dažnai siejamas su šviesos ir aiškumo simbolika.',full:'Lukas – tradicinis vardas, dažnai siejamas su šviesos ir aiškumo simbolika. Vardas yra paplitęs daugelyje Europos šalių ir turi ilgą istoriją. Simboliškai jis dažnai aiškinamas kaip ryžtingumo ir aiškios krypties vardas.'},
+  emilija:{preview:'Emilija – lotyniškos kilmės vardas, dažnai siejamas su atkaklumu ir noru tobulėti.',full:'Emilija – lotyniškos kilmės vardas, dažnai siejamas su atkaklumu ir noru tobulėti. Vardo istorijoje slypi stipri ištvermės ir pastangų simbolika. Tai vardas, kurį galima interpretuoti kaip veržlumo ir kruopštumo derinį.'},
+  matas:{preview:'Matas – hebrajiškos kilmės vardas, tradiciškai aiškinamas kaip „Dievo dovana“.',full:'Matas – hebrajiškos kilmės vardas, tradiciškai aiškinamas kaip „Dievo dovana“. Vardas turi seną biblinę istoriją ir daugelyje kultūrų išliko iki šių dienų. Simboliškai jis siejamas su dėkingumu, ramybe ir prasme.'},
+  gabija:{preview:'Gabija – lietuvių mitologijoje su ugnimi ir namų židiniu siejamas vardas.',full:'Gabija – lietuvių mitologijoje su ugnimi ir namų židiniu siejamas vardas. Šio vardo simbolikoje dažnai išryškėja namų šiluma, apsauga ir gyvybingumas. Tai vienas ryškiausių lietuviškos mitologinės tradicijos vardų.'},
+  nojus:{preview:'Nojus – hebrajiškos kilmės vardas, tradiciškai siejamas su ramybe ir atokvėpiu.',full:'Nojus – hebrajiškos kilmės vardas, tradiciškai siejamas su ramybe ir atokvėpiu. Vardas turi stiprią biblinę istoriją ir dažnai simboliškai siejamas su ištverme, nauja pradžia bei saugumu.'}
 };
 
 const grid=document.querySelector('#zodiac-grid');
@@ -53,15 +57,35 @@ function freePreview(type){
   const result=document.querySelector(`#${type}-result`);
   const data=type==='dream'?dreams:names;
   const key=input.value.trim().toLocaleLowerCase('lt');
-  const value=data[key];
-  if(!value){
-    result.textContent=`Kol kas neturime įrašo apie „${input.value.trim()||'šį žodį'}“. Ši skiltis netrukus pildysis.`;
+  const item=data[key];
+  if(!item){
+    result.innerHTML=`<span>Šio įrašo dar nėra. Išbandyk vieną iš populiarių pasirinkimų.</span>`;
     return;
   }
-  const firstSentence=value.match(/^.*?[.!?](?:\s|$)/)?.[0]?.trim() || value;
   const label=type==='dream'?'sapno reikšmė':'vardo reikšmė';
-  result.innerHTML=`<div class="free-preview"><strong>Trumpa nemokama ištrauka</strong><p>${firstSentence}</p><div class="premium-locked-card"><strong>Pilna ${label} – mokama</strong><span>Perskaityk išsamesnę interpretaciją ir papildomą informaciją.</span><button type="button" class="unlock-inline open-paywall" data-premium-type="${type}">Skaityti visą</button></div></div>`;
+  result.innerHTML=`<div class="free-preview">
+    <strong>Trumpa nemokama ištrauka</strong>
+    <p>${item.preview}</p>
+    <div class="premium-locked-card">
+      <strong>Pilna ${label} – mokama</strong>
+      <span>Išsamesnė interpretacija, simboliai ir papildoma informacija.</span>
+      <button type="button" class="unlock-inline open-paywall" data-premium-type="${type}" data-premium-key="${key}">Skaityti visą</button>
+    </div>
+  </div>`;
 }
+
+function revealPremium(type,key){
+  const data=type==='dream'?dreams:names;
+  const item=data[key];
+  const result=document.querySelector(`#${type}-result`);
+  if(!item||!result) return;
+  const label=type==='dream'?'sapno reikšmė':'vardo reikšmė';
+  result.innerHTML=`<div class="free-preview premium-revealed">
+    <strong>Visa ${label}</strong>
+    <p>${item.full}</p>
+  </div>`;
+}
+
 
 document.querySelector('#dream-button').onclick=()=>freePreview('dream');
 document.querySelector('#name-button').onclick=()=>freePreview('name');

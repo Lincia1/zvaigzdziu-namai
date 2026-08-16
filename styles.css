@@ -34,3 +34,5 @@
 .free-preview>p{margin:0 0 12px;color:var(--ink)}
 .cookie-settings-link{border:0;background:none;color:#ddd5e2;text-decoration:none;font:inherit;font-size:13px;padding:0;cursor:pointer}
 .cookie-settings-link:hover{text-decoration:underline}
+
+.horoscope-today-date{font-weight:700;color:var(--violet)!important;margin-top:10px}.premium-revealed{background:var(--lav);padding:18px;border-radius:12px}.premium-revealed p{font-size:1rem;line-height:1.7}

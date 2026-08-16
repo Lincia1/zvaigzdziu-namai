@@ -13,5 +13,8 @@ const monthlyReadings={
   'Žuvys':'Skirkite dėmesio kasdieniam ritmui ir poilsiui. Kūnas bei vaizduotė padėkos už lėtesnį tempą.'
 };
 let horoscopePeriod='daily';
+const horoscopeDate = new Intl.DateTimeFormat('lt-LT',{year:'numeric',month:'long',day:'numeric'}).format(new Date());
+const dateTarget=document.querySelector('#horoscope-today-date');
+if(dateTarget) dateTarget.textContent=`Šiandien, ${horoscopeDate}`;
 document.querySelectorAll('.horoscope-tabs button').forEach(button=>button.addEventListener('click',()=>{horoscopePeriod=button.dataset.period;document.querySelectorAll('.horoscope-tabs button').forEach(item=>item.classList.toggle('active',item===button));const active=document.querySelector('.zodiac-grid button.active');if(active)active.click();}));
 document.querySelector('#zodiac-grid').addEventListener('click',event=>{const sign=event.target.closest('button');if(!sign||horoscopePeriod==='daily')return;window.setTimeout(()=>{const name=sign.querySelector('strong').textContent;const reading=document.querySelector('#daily-reading');reading.innerHTML=`<p class="reading-period">${name} · rugpjūčio mėnesio horoskopas</p><h3>${monthlyReadings[name]}</h3><p class="premium-locked">Pilnoje versijoje: santykiai, darbai, pinigai ir palankiausios mėnesio dienos.</p><button class="unlock-inline open-paywall">Atrakinti pilną mėnesio horoskopą</button>`;},0)});

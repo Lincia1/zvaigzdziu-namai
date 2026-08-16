@@ -22,18 +22,18 @@ function hideCookieBanner() {
   }
 }
 
-if (localStorage.getItem('zvaigzdziu-cookie-choice')) hideCookieBanner();
+if (localStorage.getItem('zvaigzdziu-cookie-choice-v2')) hideCookieBanner();
 if (cookieAccept) cookieAccept.addEventListener('click', () => {
-  localStorage.setItem('zvaigzdziu-cookie-choice', 'accepted');
+  localStorage.setItem('zvaigzdziu-cookie-choice-v2', 'accepted');
   hideCookieBanner();
 });
 if (cookieReject) cookieReject.addEventListener('click', () => {
-  localStorage.setItem('zvaigzdziu-cookie-choice', 'rejected');
+  localStorage.setItem('zvaigzdziu-cookie-choice-v2', 'rejected');
   hideCookieBanner();
 });
 const cookieSettings = document.querySelector('#cookie-settings');
 if (cookieSettings) cookieSettings.addEventListener('click', () => {
-  localStorage.removeItem('zvaigzdziu-cookie-choice');
+  localStorage.removeItem('zvaigzdziu-cookie-choice-v2');
   if (cookieBanner) {
     cookieBanner.hidden = false;
     cookieBanner.setAttribute('aria-hidden', 'false');
