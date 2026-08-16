@@ -23,13 +23,203 @@ const dreams={
 };
 
 const names={
-  austėja:{preview:'Austėja – lietuvių mitologijoje su bitėmis, šeimos gerove ir globa siejamas vardas.',full:'Austėja – lietuvių mitologijoje su bitėmis, šeimos gerove ir globa siejamas vardas. Vardas dažnai interpretuojamas per darbštumo, rūpestingumo ir šeimos jaukumo simboliką. Vardo istorija gražiai siejasi su lietuviška kultūra.'},
-  lina:{preview:'Lina – trumpas, skambus vardas, siejamas su lietuvišku žodžiu „linas“ ir natūralumu.',full:'Lina – trumpas, skambus vardas, siejamas su lietuvišku žodžiu „linas“ ir natūralumu. Simboliškai šis vardas gali būti siejamas su paprastumu, švelnumu ir vidine tvirtybe. Vardo reikšmę galima pažvelgti ir per jo skambesį bei kultūrinį kontekstą.'},
-  lukas:{preview:'Lukas – tradicinis vardas, dažnai siejamas su šviesos ir aiškumo simbolika.',full:'Lukas – tradicinis vardas, dažnai siejamas su šviesos ir aiškumo simbolika. Vardas yra paplitęs daugelyje Europos šalių ir turi ilgą istoriją. Simboliškai jis dažnai aiškinamas kaip ryžtingumo ir aiškios krypties vardas.'},
-  emilija:{preview:'Emilija – lotyniškos kilmės vardas, dažnai siejamas su atkaklumu ir noru tobulėti.',full:'Emilija – lotyniškos kilmės vardas, dažnai siejamas su atkaklumu ir noru tobulėti. Vardo istorijoje slypi stipri ištvermės ir pastangų simbolika. Tai vardas, kurį galima interpretuoti kaip veržlumo ir kruopštumo derinį.'},
-  matas:{preview:'Matas – hebrajiškos kilmės vardas, tradiciškai aiškinamas kaip „Dievo dovana“.',full:'Matas – hebrajiškos kilmės vardas, tradiciškai aiškinamas kaip „Dievo dovana“. Vardas turi seną biblinę istoriją ir daugelyje kultūrų išliko iki šių dienų. Simboliškai jis siejamas su dėkingumu, ramybe ir prasme.'},
-  gabija:{preview:'Gabija – lietuvių mitologijoje su ugnimi ir namų židiniu siejamas vardas.',full:'Gabija – lietuvių mitologijoje su ugnimi ir namų židiniu siejamas vardas. Šio vardo simbolikoje dažnai išryškėja namų šiluma, apsauga ir gyvybingumas. Tai vienas ryškiausių lietuviškos mitologinės tradicijos vardų.'},
-  nojus:{preview:'Nojus – hebrajiškos kilmės vardas, tradiciškai siejamas su ramybe ir atokvėpiu.',full:'Nojus – hebrajiškos kilmės vardas, tradiciškai siejamas su ramybe ir atokvėpiu. Vardas turi stiprią biblinę istoriją ir dažnai simboliškai siejamas su ištverme, nauja pradžia bei saugumu.'}
+  const names={
+austėja:{
+preview:'Austėja – lietuvių kilmės vardas, siejamas su bitėmis, šeimos gerove, globa ir darbštumu.',
+full:'Austėja – lietuvių mitologijoje siejama su bičių globėja ir šeimos gerove. Vardo simbolikoje atsiskleidžia darbštumas, rūpestingumas, šeimos jaukumas ir gebėjimas kurti saugią aplinką.'
+},
+lina:{
+preview:'Lina – trumpas lietuviškas vardas, siejamas su linu, natūralumu, paprastumu ir švelnumu.',
+full:'Lina – vardas, siejamas su lietuvišku žodžiu „linas“. Jo simbolikoje galima įžvelgti natūralumą, paprastumą, švelnumą ir vidinę tvirtybę. Tai vardas, kuriame dera ramybė ir atkaklumas.'
+},
+lukas:{
+preview:'Lukas – tradicinis vardas, siejamas su šviesa, aiškumu ir ryžtingumu.',
+full:'Lukas – plačiai paplitęs vardas, turintis ilgą istoriją. Jo simbolikoje dažnai išryškėja šviesa, aiškumas, ryžtas ir gebėjimas pasirinkti savo kelią.'
+},
+emilija:{
+preview:'Emilija – vardas, siejamas su atkaklumu, ambicingumu ir noru tobulėti.',
+full:'Emilija – lotyniškos kilmės vardas. Jo simbolikoje dažnai išryškėja atkaklumas, kruopštumas, ambicija ir noras pasiekti daugiau. Tai vardas, kuriame dera jautrumas ir stiprus vidinis užsispyrimas.'
+},
+matas:{
+preview:'Matas – hebrajiškos kilmės vardas, tradiciškai aiškinamas kaip „Dievo dovana“.',
+full:'Matas – senas hebrajiškos kilmės vardas, tradiciškai aiškinamas kaip „Dievo dovana“. Jo simbolikoje atsiskleidžia dėkingumas, ramybė, pasitikėjimas ir gyvenimo prasmės paieškos.'
+},
+gabija:{
+preview:'Gabija – lietuvių mitologinis vardas, siejamas su ugnimi, namų židiniu ir apsauga.',
+full:'Gabija – lietuvių mitologijoje su namų židiniu ir ugnimi siejama būtybė. Vardo simbolikoje išryškėja šiluma, gyvybingumas, apsauga, stipri valia ir gebėjimas saugoti tai, kas brangu.'
+},
+nojus:{
+preview:'Nojus – hebrajiškos kilmės vardas, siejamas su ramybe, atokvėpiu ir nauja pradžia.',
+full:'Nojus – hebrajiškos kilmės vardas, tradiciškai siejamas su ramybe ir atokvėpiu. Jo simbolikoje atsiskleidžia ištvermė, saugumas, gebėjimas išgyventi pokyčius ir pradėti naują gyvenimo etapą.'
+},
+laura:{
+preview:'Laura – vardas, siejamas su lauru, pergale, garbe ir pasitikėjimu savimi.',
+full:'Laura – vardas, siejamas su lotynišku lauro medžiu. Senovėje lauro vainikas simbolizavo pergalę ir garbę. Vardo simbolikoje galima įžvelgti ambiciją, pasitikėjimą savimi ir norą pasiekti užsibrėžtą tikslą.'
+},
+faustas:{
+preview:'Faustas – lotyniškos kilmės vardas, siejamas su palankumu, sėkme ir geru likimu.',
+full:'Faustas – lotyniškos kilmės vardas, siejamas su palankia lemtimi ir sėkme. Vardo simbolikoje išryškėja optimizmas, smalsumas, ryžtas ir noras išnaudoti gyvenimo suteikiamas galimybes.'
+},
+klaudija:{
+preview:'Klaudija – lotyniškos kilmės vardas, siejamas su tvirtumu, santūrumu ir vidine stiprybe.',
+full:'Klaudija – lotyniškos kilmės vardas. Jo simbolikoje galima įžvelgti santūrumą, stiprų charakterį, savarankiškumą ir gebėjimą išlaikyti savo kryptį net sudėtingomis aplinkybėmis.'
+},
+aleksiejus:{
+preview:'Aleksiejus – graikiškos kilmės vardas, siejamas su gynėjo, globėjo ir saugotojo simbolika.',
+full:'Aleksiejus – graikiškos kilmės vardas, siejamas su gynėjo ir saugotojo reikšme. Vardo simbolikoje atsiskleidžia atsakomybė, ištikimybė, stipri valia ir noras padėti artimiems žmonėms.'
+},
+andrius:{
+preview:'Andrius – graikiškos kilmės vardas, tradiciškai siejamas su vyriškumu, drąsa ir stiprybe.',
+full:'Andrius – graikiškos kilmės vardas. Tradiciškai jis siejamas su vyriškumu ir stiprybe. Simboliškai tai ryžto, drąsos, savarankiškumo ir gebėjimo veikti vardas.'
+},
+antanas:{
+preview:'Antanas – senas vardas, siejamas su išskirtinumu, atkaklumu ir stipriu charakteriu.',
+full:'Antanas – ilgametę istoriją turintis vardas. Jo simbolikoje galima įžvelgti atkaklumą, stabilumą, atsakomybę ir stiprų charakterį.'
+},
+artūras:{
+preview:'Artūras – vardas, siejamas su drąsa, lyderyste, kilnumu ir ryžtu.',
+full:'Artūras – ilga istorija pasižymintis vardas. Jo simbolikoje dažnai išryškėja drąsa, lyderystė, garbė, atsakomybė ir noras ginti tai, kas svarbu.'
+},
+darius:{
+preview:'Darius – vardas, siejamas su stiprybe, ryžtu, atkaklumu ir gebėjimu siekti tikslo.',
+full:'Darius – seną istoriją turintis vardas. Jo simbolikoje atsiskleidžia ryžtas, atsakomybė, atkaklumas ir noras kurti stabilų gyvenimą.'
+},
+dominykas:{
+preview:'Dominykas – lotyniškos kilmės vardas, siejamas su priklausymu Dievui ir vidine ramybe.',
+full:'Dominykas – lotyniškos kilmės vardas. Jo simbolikoje dažnai atsiskleidžia ramybė, atsakomybė, principingumas ir stiprus vidinis pasaulis.'
+},
+edvinas:{
+preview:'Edvinas – germaniškos kilmės vardas, siejamas su turtais, draugyste ir sėkme.',
+full:'Edvinas – germaniškos kilmės vardas. Jo simbolikoje galima įžvelgti draugiškumą, praktiškumą, siekį kurti gerovę ir stiprius ryšius su aplinkiniais.'
+},
+erikas:{
+preview:'Erikas – skandinaviškos kilmės vardas, siejamas su valdžia, stiprybe ir lyderyste.',
+full:'Erikas – skandinaviškos kilmės vardas, siejamas su galingo valdovo simbolika. Vardo energijoje atsiskleidžia savarankiškumas, ambicija, drąsa ir noras būti savo gyvenimo šeimininku.'
+},
+giedrius:{
+preview:'Giedrius – lietuviškas vardas, siejamas su giedrumu, šviesa ir ramia nuotaika.',
+full:'Giedrius – lietuviškas vardas, siejamas su giedru dangumi ir šviesia nuotaika. Jo simbolikoje atsiskleidžia optimizmas, atvirumas, ramybė ir gebėjimas į gyvenimą žvelgti šviesiau.'
+},
+ignas:{
+preview:'Ignas – vardas, siejamas su vidine ugnimi, energija ir stipriu charakteriu.',
+full:'Ignas – vardas, kurio simbolikoje galima įžvelgti vidinę ugnį, energiją, ryžtą ir stiprų charakterį. Tai vardas, tinkantis žmogui, kuris nebijo veikti ir siekti savo.'
+},
+jokūbas:{
+preview:'Jokūbas – hebrajiškos kilmės vardas, siejamas su atkaklumu, ištverme ir gyvenimo kelio paieškomis.',
+full:'Jokūbas – senas hebrajiškos kilmės vardas. Jo istorijoje svarbi atkaklumo ir gyvenimo kelio simbolika. Vardas gali būti siejamas su ištverme, ryžtu ir gebėjimu nepasiduoti.'
+},
+jonas:{
+preview:'Jonas – hebrajiškos kilmės vardas, tradiciškai siejamas su malone ir Dievo dovana.',
+full:'Jonas – vienas seniausių ir plačiausiai paplitusių vardų. Jo simbolikoje atsiskleidžia ramybė, gerumas, ištikimybė ir gebėjimas būti atrama kitiems.'
+},
+karolis:{
+preview:'Karolis – vardas, siejamas su laisve, stipriu charakteriu ir savarankiškumu.',
+full:'Karolis – germaniškos kilmės vardas. Jo simbolikoje galima įžvelgti savarankiškumą, stiprų charakterį, atsakomybę ir norą pačiam spręsti savo gyvenimo kryptį.'
+},
+mantas:{
+preview:'Mantas – lietuviškas vardas, siejamas su sumanumu, ryžtu ir gebėjimu veikti.',
+full:'Mantas – lietuviškas vardas, kurio simbolikoje galima įžvelgti sumanumą, praktiškumą, atkaklumą ir gebėjimą greitai prisitaikyti prie gyvenimo aplinkybių.'
+},
+martynas:{
+preview:'Martynas – vardas, siejamas su kovingumu, drąsa ir stipria valia.',
+full:'Martynas – lotyniškos kilmės vardas, siejamas su karo dievo Marso simbolika. Vardo energijoje atsiskleidžia drąsa, ryžtas, atkaklumas ir gebėjimas kovoti už tai, kas svarbu.'
+},
+paulius:{
+preview:'Paulius – lotyniškos kilmės vardas, siejamas su kuklumu, ramybe ir vidine stiprybe.',
+full:'Paulius – lotyniškos kilmės vardas. Jo simbolikoje atsiskleidžia santūrumas, išmintis, kantrybė ir gebėjimas išlaikyti savo vertybes.'
+},
+rokas:{
+preview:'Rokas – vardas, siejamas su tvirtumu, stabilumu ir gebėjimu išlikti stipriam.',
+full:'Rokas – vardas, kurio simbolikoje galima įžvelgti uolos tvirtumą. Tai stabilumo, ištvermės, patikimumo ir vidinės stiprybės simbolika.'
+},
+tadas:{
+preview:'Tadas – vardas, siejamas su drąsa, atkaklumu ir stipriu charakteriu.',
+full:'Tadas – seną istoriją turintis vardas. Jo simbolikoje galima įžvelgti atkaklumą, drąsą, ištikimybę ir gebėjimą laikytis savo pasirinkimų.'
+},
+tomas:{
+preview:'Tomas – aramėjų kilmės vardas, siejamas su dvynio simbolika ir smalsumu.',
+full:'Tomas – aramėjų kilmės vardas, tradiciškai siejamas su „dvynio“ reikšme. Jo simbolikoje galima įžvelgti smalsumą, gebėjimą abejoti ir ieškoti savo atsakymo.'
+},
+vaidas:{
+preview:'Vaidas – lietuviškas vardas, siejamas su vedimu, kryptimi ir ryžtu.',
+full:'Vaidas – lietuviškas vardas, kurio simbolikoje galima įžvelgti krypties, vedimo ir sprendimų priėmimo temą. Tai savarankiškumo ir ryžto simbolika.'
+},
+vilius:{
+preview:'Vilius – vardas, siejamas su ryžtu, valia ir stipriu charakteriu.',
+full:'Vilius – vardas, kurio simbolikoje išryškėja valia, ryžtas ir gebėjimas siekti pasirinkto tikslo. Tai savarankiškumo ir vidinės stiprybės simbolika.'
+},
+agne:{
+preview:'Agnė – vardas, siejamas su tyrumu, nuoširdumu ir vidine ramybe.',
+full:'Agnė – vardas, kurio simbolikoje dažnai išryškėja tyrumas, nuoširdumas, jautrumas ir vidinė ramybė. Kartu tai gali būti ir stipraus charakterio simbolis.'
+},
+akvilė:{
+preview:'Akvilė – lotyniškos kilmės vardas, siejamas su erelio simbolika, laisve ir stiprybe.',
+full:'Akvilė – lotyniškos kilmės vardas, siejamas su erelio simbolika. Joje atsiskleidžia laisvė, aukštas skrydis, ryžtas, savarankiškumas ir gebėjimas matyti plačiau.'
+},
+amelija:{
+preview:'Amelija – vardas, siejamas su darbštumu, ryžtu ir atkaklumu.',
+full:'Amelija – vardas, kurio simbolikoje atsiskleidžia darbštumas, atkaklumas, ambicija ir noras kurti geresnį gyvenimą. Tai švelnumo ir stiprios valios derinys.'
+},
+barbora:{
+preview:'Barbora – senas vardas, siejamas su išskirtinumu, savarankiškumu ir stipriu charakteriu.',
+full:'Barbora – ilga istorija pasižymintis vardas. Jo simbolikoje galima įžvelgti savarankiškumą, išskirtinumą, tvirtą nuomonę ir gebėjimą nebijoti būti savimi.'
+},
+beata:{
+preview:'Beata – lotyniškos kilmės vardas, siejamas su laime, palaima ir pozityviu požiūriu.',
+full:'Beata – lotyniškos kilmės vardas, siejamas su palaima ir laime. Jo simbolikoje atsiskleidžia optimizmas, šviesus požiūris ir gebėjimas pastebėti gyvenimo dovanas.'
+},
+diana:{
+preview:'Diana – vardas, siejamas su gamta, laisve, nepriklausomybe ir stipria intuicija.',
+full:'Diana – vardas, susijęs su senąja romėnų deivės simbolika. Joje atsiskleidžia gamtos artumas, nepriklausomybė, intuicija ir stiprus moteriškas charakteris.'
+},
+ieva:{
+preview:'Ieva – biblinis vardas, siejamas su gyvybe, pradžia ir moteriška stiprybe.',
+full:'Ieva – senas biblinis vardas, siejamas su gyvybe. Jo simbolikoje atsiskleidžia nauja pradžia, gyvybingumas, smalsumas ir gebėjimas kurti naują gyvenimo etapą.'
+},
+inga:{
+preview:'Inga – vardas, siejamas su stiprybe, savarankiškumu ir vidiniu stabilumu.',
+full:'Inga – vardas, kurio simbolikoje galima įžvelgti vidinį stabilumą, savarankiškumą ir gebėjimą išlaikyti savo nuomonę. Tai ramios, bet tvirtos asmenybės simbolika.'
+},
+justina:{
+preview:'Justina – vardas, siejamas su teisingumu, sąžiningumu ir stipriu vertybių jausmu.',
+full:'Justina – lotyniškos kilmės vardas. Jo simbolikoje atsiskleidžia teisingumas, sąžiningumas, principingumas ir noras elgtis taip, kaip atrodo teisinga.'
+},
+kamile:{
+preview:'Kamilė – vardas, siejamas su atsidavimu, jautrumu ir vidine elegancija.',
+full:'Kamilė – vardas, kurio simbolikoje galima įžvelgti atsidavimą, jautrumą, rūpestingumą ir stiprų ryšį su artimais žmonėmis.'
+},
+karolina:{
+preview:'Karolina – vardas, siejamas su laisve, savarankiškumu ir stipria valia.',
+full:'Karolina – vardas, kurio simbolikoje atsiskleidžia laisvės poreikis, savarankiškumas, stipri valia ir gebėjimas pačiai pasirinkti savo gyvenimo kelią.'
+},
+kristina:{
+preview:'Kristina – vardas, siejamas su tikėjimu, ištikimybe ir stipriomis vertybėmis.',
+full:'Kristina – vardas, turintis ilgą krikščionišką istoriją. Jo simbolikoje išryškėja ištikimybė, vertybės, jautrumas ir gebėjimas laikytis to, kuo tiki.'
+},
+monika:{
+preview:'Monika – vardas, siejamas su išmintimi, ramybe ir stipriu vidiniu pasauliu.',
+full:'Monika – vardas, kurio simbolikoje galima įžvelgti išmintį, santūrumą, jautrumą ir stiprų vidinį pasaulį. Tai žmogaus, kuris daug jaučia ir daug apmąsto, simbolika.'
+},
+natalija:{
+preview:'Natalija – vardas, siejamas su gimimu, nauja pradžia ir gyvenimo džiaugsmu.',
+full:'Natalija – lotyniškos kilmės vardas, siejamas su gimimu ir naujo gyvenimo pradžia. Jo simbolikoje atsiskleidžia atsinaujinimas, gyvybingumas ir gebėjimas pradėti iš naujo.'
+},
+rūta:{
+preview:'Rūta – lietuviškas vardas, siejamas su augalu, gamta, ištverme ir lietuviška tradicija.',
+full:'Rūta – lietuviškas vardas, siejamas su rūtos augalu ir lietuviška kultūra. Vardo simbolikoje atsiskleidžia gamtos artumas, ištvermė, paprastumas ir tradicijų puoselėjimas.'
+},
+simona:{
+preview:'Simona – vardas, siejamas su klausymusi, jautrumu ir gebėjimu suprasti kitus.',
+full:'Simona – vardas, turintis seną tradiciją. Jo simbolikoje galima įžvelgti jautrumą, gebėjimą klausytis, suprasti kitus ir išlaikyti stiprų emocinį ryšį.'
+},
+viktorija:{
+preview:'Viktorija – lotyniškos kilmės vardas, tiesiogiai siejamas su pergale.',
+full:'Viktorija – lotyniškos kilmės vardas, siejamas su pergalės simbolika. Vardo energijoje atsiskleidžia ambicija, atkaklumas, pasitikėjimas savimi ir noras įveikti kliūtis.'
+},
+vilma:{
+preview:'Vilma – vardas, siejamas su ryžtu, valia ir stipriu charakteriu.',
+full:'Vilma – vardas, kurio simbolikoje išryškėja valia, ryžtas, savarankiškumas ir gebėjimas nepasiduoti. Tai stiprios, bet jautrios asmenybės simbolika.'
+}
 };
 
 const grid=document.querySelector('#zodiac-grid');
